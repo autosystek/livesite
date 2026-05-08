@@ -164,12 +164,68 @@
     </p>
   </div>
 
-  <form class="reveal">
-    <input placeholder="Name"/>
-    <input placeholder="Email"/>
-    <textarea placeholder="What do you need help with?"></textarea>
-    <button type="button">Send Message</button>
-  </form>
+<form
+  class="reveal"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+
+  <!-- Web3Forms Access Key -->
+  <input
+    type="hidden"
+    name="access_key"
+    value="fa6e28a2-f1b4-4f5b-8642-f42cb9ffb42d"
+  >
+
+  <!-- Email Subject -->
+  <input
+    type="hidden"
+    name="subject"
+    value="New AutoSysTek Contact Form Submission"
+  >
+
+  <!-- Optional Redirect After Submit -->
+  <!--
+  <input
+    type="hidden"
+    name="redirect"
+    value="https://autosystek.com/thank-you.html"
+  >
+  -->
+
+  <!-- Spam Protection -->
+  <input
+    type="checkbox"
+    name="botcheck"
+    class="hidden"
+    style="display: none;"
+  >
+
+  <input
+    type="text"
+    name="name"
+    placeholder="Name"
+    required
+  >
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Email"
+    required
+  >
+
+  <textarea
+    name="message"
+    placeholder="What do you need help with?"
+    required
+  ></textarea>
+
+  <button type="submit">
+    Send Message
+  </button>
+
+</form>
 </section>
 
 </main>
